@@ -1,6 +1,5 @@
 node_modules
 package-lock.json
-users
-'apache2 and nginx config'
-server*
 __*.*
+*.txt
+git.txt

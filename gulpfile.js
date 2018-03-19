@@ -47,10 +47,10 @@ gulp.task('build', ['clean', 'less', 'js'], function() {
 gulp.task('browser-sync', function() {
 	'use strict';
 	browserSync({
-		/*server: {
+		server: {
 			baseDir: 'src'
-		},*/
-		proxy: 'soundstream',
+		},
+		// proxy: 'soundstream',
 		port: 	9999,
 		notify: false,
 
@@ -146,9 +146,8 @@ gulp.task('js-min', function() {
 // gulp.task('watch', ['browser-sync', 'less'], function() {
 gulp.task('watch', ['browser-sync'], function() {
 	'use strict';
-	gulp.watch('src/*.html', browserSync.reload);
+	gulp.watch('src/**/*.html', browserSync.reload);
 	gulp.watch('src/**/*.php', browserSync.reload);
-	gulp.watch('src/layouts/*.php', browserSync.reload);
 
     gulp.watch(
     	[
