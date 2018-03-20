@@ -10,7 +10,15 @@
 
 // fonts
 @font-sfui: "SFUIDisplay-Light", sans-serif;
-@font-roboto: "RobotoRegular", sans-serif;
+
+@font-mullerregular: "MullerRegular", sans-serif;
+@font-mullermedium: "MullerMedium", sans-serif;
+@font-mullerbold: "MullerBold", sans-serif;
+@font-mullerextrabold: "MullerExtraBold", sans-serif;
+@font-mullerheavy: "MullerHeavy", sans-serif;
+
+@font-gothamproregular: "GothamProRegular", sans-serif;
+
 
 
 
@@ -109,10 +117,10 @@ html {
 	min-height: 100%;
 }
 body {
+	color: #333;
+	font-size: 14px;
+    font-family: @font-mullerregular;
 	height: 100%;
-	font-size: 12px;
-    font-family: "RobotoRegular", sans-serif;
-    font-family: @font-sfui;
     margin: 0;
     padding: 0;
 }
@@ -238,5 +246,49 @@ ul, ol {
 	height: 178px;
 	.rights {
 		color: #b3b2b2;
+		font-family: @font-gothamproregular;
+		font-size: 10px;
+	}
+}
+
+
+
+.section-title {
+	color:  #626262;
+	font-size: 30px;
+	font-family: @font-mullermedium;
+	font-weight: normal;
+	margin-bottom: 80px;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	&:after {
+		background: @brand-primary;
+		content: '';
+		display: block;
+		width: 120px;
+		height: 3px;
+		position: absolute;
+		text-align: center;
+		left: 50%;
+		bottom: -50%;
+		transform: translateX(-50%);
+	}
+}
+
+.banner-title {
+	color: #fff;
+	font-family: @font-mullerbold;
+	font-size: 30px;
+}
+
+
+// about.html
+.banner-about {
+	background: url('../img/banner-about.jpg') no-repeat center / cover;
+	height: 370px;
+	margin-bottom: 50px;
+	.banner-content {
+		padding-right: 100px;
 	}
 }

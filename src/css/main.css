@@ -1,15 +1,48 @@
 @font-face {
-  font-family: "RobotoRegular";
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
-  font-style: normal;
+  font-family: 'MullerRegular';
+  src: url('../fonts/Muller/MullerRegular.otf');
+  src: url('../fonts/Muller/MullerRegular.otf') format('embedded-opentype'), url('../fonts/Muller/MullerRegular.otf') format('woff'), url('../fonts/Muller/MullerRegular.otf') format('truetype'), url('../fonts/Muller/MullerRegular.otf') format('svg');
+  src: local('MullerRegular'), url('../fonts/Muller/MullerRegular.otf');
   font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'SFUIDisplay-Light';
-  src: url('../fonts/SFUIDisplay-Light.otf');
-  src: url('../fonts/SFUIDisplay-Light.otf') format('embedded-opentype'), url('../fonts/SFUIDisplay-Light.otf') format('woff'), url('../fonts/SFUIDisplay-Light.otf') format('truetype'), url('../fonts/SFUIDisplay-Light.otf') format('svg');
-  src: local('SFUIDisplay-Light'), url('../fonts/SFUIDisplay-Light.otf');
+  font-family: 'MullerMedium';
+  src: url('../fonts/Muller/MullerMedium.otf');
+  src: url('../fonts/Muller/MullerMedium.otf') format('embedded-opentype'), url('../fonts/Muller/MullerMedium.otf') format('woff'), url('../fonts/Muller/MullerMedium.otf') format('truetype'), url('../fonts/Muller/MullerMedium.otf') format('svg');
+  src: local('MullerMedium'), url('../fonts/Muller/MullerMedium.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MullerBold';
+  src: url('../fonts/Muller/MullerBold.otf');
+  src: url('../fonts/Muller/MullerBold.otf') format('embedded-opentype'), url('../fonts/Muller/MullerBold.otf') format('woff'), url('../fonts/Muller/MullerBold.otf') format('truetype'), url('../fonts/Muller/MullerBold.otf') format('svg');
+  src: local('MullerBold'), url('../fonts/Muller/MullerBold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MullerExtraBold';
+  src: url('../fonts/Muller/MullerExtraBold.otf');
+  src: url('../fonts/Muller/MullerExtraBold.otf') format('embedded-opentype'), url('../fonts/Muller/MullerExtraBold.otf') format('woff'), url('../fonts/Muller/MullerExtraBold.otf') format('truetype'), url('../fonts/Muller/MullerExtraBold.otf') format('svg');
+  src: local('MullerExtraBold'), url('../fonts/Muller/MullerExtraBold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MullerHeavy';
+  src: url('../fonts/Muller/MullerHeavy.otf');
+  src: url('../fonts/Muller/MullerHeavy.otf') format('embedded-opentype'), url('../fonts/Muller/MullerHeavy.otf') format('woff'), url('../fonts/Muller/MullerHeavy.otf') format('truetype'), url('../fonts/Muller/MullerHeavy.otf') format('svg');
+  src: local('MullerHeavy'), url('../fonts/Muller/MullerHeavy.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GothamProRegular';
+  src: url('../fonts/GothamProRegular.otf');
+  src: url('../fonts/GothamProRegular.otf') format('embedded-opentype'), url('../fonts/GothamProRegular.otf') format('woff'), url('../fonts/GothamProRegular.otf') format('truetype'), url('../fonts/GothamProRegular.otf') format('svg');
+  src: local('GothamProRegular'), url('../fonts/GothamProRegular.otf');
   font-weight: normal;
   font-style: normal;
 }
@@ -2046,10 +2079,10 @@ html {
   min-height: 100%;
 }
 body {
+  color: #333;
+  font-size: 14px;
+  font-family: "MullerRegular", sans-serif;
   height: 100%;
-  font-size: 12px;
-  font-family: "RobotoRegular", sans-serif;
-  font-family: "SFUIDisplay-Light", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -2164,4 +2197,43 @@ ol {
 }
 .footer .rights {
   color: #b3b2b2;
+  font-family: "GothamProRegular", sans-serif;
+  font-size: 10px;
+}
+.section-title {
+  color: #626262;
+  font-size: 30px;
+  font-family: "MullerMedium", sans-serif;
+  font-weight: normal;
+  margin-bottom: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+.section-title:after {
+  background: #ffa700;
+  content: '';
+  display: block;
+  width: 120px;
+  height: 3px;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  bottom: -50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.banner-title {
+  color: #fff;
+  font-family: "MullerBold", sans-serif;
+  font-size: 30px;
+}
+.banner-about {
+  background: url('../img/banner-about.jpg') no-repeat center / cover;
+  height: 370px;
+  margin-bottom: 50px;
+}
+.banner-about .banner-content {
+  padding-right: 100px;
 }
