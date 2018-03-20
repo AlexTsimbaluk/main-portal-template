@@ -147,22 +147,7 @@ gulp.task('js-min', function() {
 gulp.task('watch', ['browser-sync'], function() {
 	'use strict';
 	gulp.watch('src/**/*.html', browserSync.reload);
-	gulp.watch('src/**/*.php', browserSync.reload);
 
-    gulp.watch(
-    	[
-    		'src/js/player.js',
-    		'src/js/user.js',
-    		'src/js/visits.js',
-    		'src/js/admin.js',
-    		'src/js/fractals.js',
-    		'src/js/fractals-advanced.js',
-    		'src/js/canvas.js'
-    	],
-    	// ['js', 'js-min']
-    	['js']
-	);
-	
 	gulp.watch([
 			'src/less/*.less',
 			'src/libs/bootstrap-material-design-master/less/*.less'
