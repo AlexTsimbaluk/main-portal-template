@@ -2194,6 +2194,7 @@ ol {
 .footer {
   background: #383838;
   height: 178px;
+  margin-top: 70px;
 }
 .footer .rights {
   color: #b3b2b2;
@@ -2229,11 +2230,44 @@ ol {
   font-family: "MullerBold", sans-serif;
   font-size: 30px;
 }
+.main-title {
+  color: #ffa700;
+  font-family: "MullerBold", sans-serif;
+  font-size: 30px;
+  margin: 50px 0 30px;
+}
+.main-title .title-detail {
+  color: #333;
+  font-family: "MullerRegular", sans-serif;
+  font-size: 20px;
+}
+.extra-title {
+  font-family: "MullerBold", sans-serif;
+  font-size: 20px;
+}
+.section-content {
+  margin: 0 auto;
+  width: 84%;
+}
 .banner-about {
   background: url('../img/banner-about.jpg') no-repeat center / cover;
   height: 370px;
-  margin-bottom: 50px;
 }
 .banner-about .banner-content {
   padding-right: 100px;
+}
+.connection-order .item-number {
+  color: #ffa700;
+  font-family: "MullerHeavy", sans-serif;
+  font-size: 40px;
+  padding-right: 10px;
+  position: relative;
+  top: 2px;
+}
+.connection-order .item-link {
+  color: #ffa700;
+  text-decoration: underline;
+}
+.connection-details {
+  margin-top: 20px;
 }

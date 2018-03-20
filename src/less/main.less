@@ -6,6 +6,7 @@
 @import '../libs/bootstrap-material-design-master/less/bootstrap-material-design.less';
 
 @brand-primary: #ffa700;
+@default-color: #333;
 
 
 // fonts
@@ -117,7 +118,7 @@ html {
 	min-height: 100%;
 }
 body {
-	color: #333;
+	color: @default-color;
 	font-size: 14px;
     font-family: @font-mullerregular;
 	height: 100%;
@@ -244,6 +245,7 @@ ul, ol {
 .footer {
 	background: #383838;
 	height: 178px;
+	margin-top: 70px;
 	.rights {
 		color: #b3b2b2;
 		font-family: @font-gothamproregular;
@@ -282,13 +284,54 @@ ul, ol {
 	font-size: 30px;
 }
 
+.main-title {
+	color: @brand-primary;
+	font-family: @font-mullerbold;
+	font-size: 30px;
+	margin: 50px 0 30px;
+	.title-detail {
+		color: @default-color;
+		font-family: @font-mullerregular;
+		font-size: 20px;
+	}
+}
+
+.extra-title {
+	font-family: @font-mullerbold;
+	font-size: 20px;
+}
+
+.section-content {
+	margin: 0 auto;
+	width: 84%;
+}
+
 
 // about.html
 .banner-about {
 	background: url('../img/banner-about.jpg') no-repeat center / cover;
 	height: 370px;
-	margin-bottom: 50px;
+	// margin-bottom: 50px;
 	.banner-content {
 		padding-right: 100px;
 	}
+}
+
+.connection-order {
+	.item-number {
+		color: @brand-primary;
+		font-family: @font-mullerheavy;
+		font-size: 40px;
+		padding-right: 10px;
+		position: relative;
+		top: 2px;
+	}
+	.item-link {
+		color: @brand-primary;
+		text-decoration: underline;
+	}
+}
+
+.connection-details {
+	margin-top: 20px;
 }
