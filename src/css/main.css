@@ -2055,9 +2055,9 @@ ol {
 .logo-footer .logo {
   width: 100%;
   height: auto;
-  -webkit-transform: translateY(-38%);
-      -ms-transform: translateY(-38%);
-          transform: translateY(-38%);
+  -webkit-transform: translateY(-24%);
+      -ms-transform: translateY(-24%);
+          transform: translateY(-24%);
 }
 .nav-header,
 .nav-footer {
@@ -2180,8 +2180,8 @@ ol {
 .connection-details {
   margin-top: 20px;
 }
-#news .page-content {
-  background: #f3f3f3;
+#news-list .page-content {
+  background: #f6f6f6;
 }
 .news-list .news-item-wrapper {
   margin-bottom: 100px;
@@ -2200,6 +2200,7 @@ ol {
 }
 .news-list .news-item-content {
   padding: 35px 12px;
+  position: relative;
 }
 .news-list .news-title {
   color: #626262;
@@ -2216,6 +2217,8 @@ ol {
   color: #ffa700;
   font-family: "MullerMedium", sans-serif;
   font-size: 12px;
+  position: absolute;
+  bottom: 45px;
 }
 .news-pagination {
   display: inline-block;
@@ -2233,4 +2236,7 @@ ol {
 .news-pagination .pager-item.active a {
   color: #ffa700;
   font-family: "MullerBold", sans-serif;
+}
+#news-inside .page-content {
+  background: #f6f6f6;
 }

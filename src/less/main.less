@@ -157,7 +157,7 @@ ul, ol {
 	.logo {
 		width: 100%;
 		height: auto;
-		transform: translateY(-38%);
+		transform: translateY(-24%);
 	}
 }
 
@@ -317,10 +317,10 @@ ul, ol {
 
 
 
-// news.html
-#news {
+// news.html - все новости
+#news-list {
 	.page-content {
-		background: #f3f3f3;
+		background: #f6f6f6;
 	}
 }
 
@@ -340,6 +340,7 @@ ul, ol {
 	}
 	.news-item-content {
 		padding: 35px 12px;
+		position: relative;
 	}
 	.news-title {
 		color:  #626262;
@@ -356,6 +357,8 @@ ul, ol {
 		color:  @brand-primary;
 		font-family: @font-mullermedium;
 		font-size: 12px;
+		position: absolute;
+		bottom: 45px;
 	}
 }
 
@@ -376,5 +379,14 @@ ul, ol {
 				font-family: @font-mullerbold;
 			}
 		}
+	}
+}
+
+
+
+// news-inside - страница новости внутри
+#news-inside {
+	.page-content {
+		background: #f6f6f6;
 	}
 }
