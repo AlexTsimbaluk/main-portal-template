@@ -2107,6 +2107,9 @@ ol {
 .page-content {
   padding: 0 0 50px;
 }
+.section {
+  padding-top: 66px;
+}
 .section-title {
   color: #626262;
   font-size: 30px;
@@ -2176,4 +2179,41 @@ ol {
 }
 .connection-details {
   margin-top: 20px;
+}
+#news .page-content {
+  background: #f3f3f3;
+}
+.news-list .news-item-wrapper {
+  margin-bottom: 100px;
+  padding: 15px;
+}
+.news-list .news-item {
+  background: #fff;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15);
+  height: 406px;
+}
+.news-list .news-item-image {
+  width: 100%;
+}
+.news-list .news-item-content {
+  padding: 35px 12px;
+}
+.news-list .news-title {
+  color: #626262;
+  font-family: "MullerMedium", sans-serif;
+  font-size: 18px;
+}
+.news-list .news-summary {
+  color: #626262;
+  font-family: "MullerRegular", sans-serif;
+  font-size: 14px;
+  margin: 35px 0;
+}
+.news-list .news-more {
+  color: #ffa700;
+  font-family: "MullerMedium", sans-serif;
+  font-size: 12px;
 }
