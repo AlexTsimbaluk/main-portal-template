@@ -2217,3 +2217,20 @@ ol {
   font-family: "MullerMedium", sans-serif;
   font-size: 12px;
 }
+.news-pagination {
+  display: inline-block;
+  margin-right: 15px;
+}
+.news-pagination .pager-item {
+  display: inline-block;
+  margin-right: 2px;
+}
+.news-pagination .pager-item a {
+  color: #626262;
+  font-family: "MullerMedium", sans-serif;
+  font-size: 16px;
+}
+.news-pagination .pager-item.active a {
+  color: #ffa700;
+  font-family: "MullerBold", sans-serif;
+}

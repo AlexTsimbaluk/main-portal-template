@@ -358,3 +358,23 @@ ul, ol {
 		font-size: 12px;
 	}
 }
+
+.news-pagination {
+	display: inline-block;
+	margin-right: 15px;
+	.pager-item {
+		display: inline-block;
+		margin-right: 2px;
+		a {
+			color:  #626262;
+			font-family: @font-mullermedium;
+			font-size: 16px;
+		}
+		&.active {
+			a {
+				color: @brand-primary;
+				font-family: @font-mullerbold;
+			}
+		}
+	}
+}
