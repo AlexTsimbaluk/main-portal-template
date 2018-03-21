@@ -1896,9 +1896,6 @@ select.form-control[multiple],
 .btn:not(.btn-raised)img {
   display: inline;
 }
-.btn-group.open > .dropdown-toggle.btn {
-  background: transparent;
-}
 :not(.focus-fade)::-webkit-input-placeholder {
   color: #fff;
   text-overflow: ellipsis;
@@ -1976,113 +1973,15 @@ select.form-control[multiple],
   -webkit-transition: opacity .3s ease;
   transition: opacity .3s ease;
 }
-/* сдвиг placeholder-а вправо при фокусе*/
-.focus-right::-webkit-input-placeholder {
-  color: #fff;
-  text-indent: 0px;
-  -webkit-transition: text-indent 0.8s ease-in-out;
-  transition: text-indent 0.8s ease-in-out;
-}
-.focus-right::-moz-placeholder {
-  color: #fff;
-  text-indent: 0px;
-  -webkit-transition: text-indent 0.8s ease-in-out;
-  transition: text-indent 0.8s ease-in-out;
-}
-.focus-right:-ms-input-placeholder {
-  color: #fff;
-  text-indent: 0px;
-  -webkit-transition: text-indent 0.8s ease-in-out;
-  transition: text-indent 0.8s ease-in-out;
-}
-.focus-right::placeholder {
-  color: #fff;
-  text-indent: 0px;
-  -webkit-transition: text-indent 0.8s ease-in-out;
-  transition: text-indent 0.8s ease-in-out;
-}
-.focus-right:focus::-webkit-input-placeholder {
-  color: #000;
-  text-indent: 100vw;
-  -webkit-transition: text-indent 1.6s linear;
-  transition: text-indent 1.6s linear;
-}
-.focus-right:focus::-moz-placeholder {
-  color: #000;
-  text-indent: 100vw;
-  -webkit-transition: text-indent 1.6s linear;
-  transition: text-indent 1.6s linear;
-}
-.focus-right:focus:-ms-input-placeholder {
-  color: #000;
-  text-indent: 100vw;
-  -webkit-transition: text-indent 1.6s linear;
-  transition: text-indent 1.6s linear;
-}
-.focus-right:focus::placeholder {
-  color: #000;
-  text-indent: 100vw;
-  -webkit-transition: text-indent 1.6s linear;
-  transition: text-indent 1.6s linear;
-}
-/* сдвиг placeholder-а вниз при фокусе*/
-.focus-bottom::-webkit-input-placeholder {
-  color: #fff;
-  line-height: normal;
-  -webkit-transition: line-height 0.5s ease;
-  transition: line-height 0.5s ease;
-}
-.focus-bottom::-moz-placeholder {
-  color: #fff;
-  line-height: normal;
-  -webkit-transition: line-height 0.5s ease;
-  transition: line-height 0.5s ease;
-}
-.focus-bottom:-ms-input-placeholder {
-  color: #fff;
-  line-height: normal;
-  -webkit-transition: line-height 0.5s ease;
-  transition: line-height 0.5s ease;
-}
-.focus-bottom::placeholder {
-  color: #fff;
-  line-height: normal;
-  -webkit-transition: line-height 0.5s ease;
-  transition: line-height 0.5s ease;
-}
-.focus-bottom:focus::-webkit-input-placeholder {
-  color: #000;
-  line-height: 10;
-  -webkit-transition: line-height 0.5s ease;
-  transition: line-height 0.5s ease;
-}
-.focus-bottom:focus::-moz-placeholder {
-  color: #000;
-  line-height: 10;
-  -webkit-transition: line-height 0.5s ease;
-  transition: line-height 0.5s ease;
-}
-.focus-bottom:focus:-ms-input-placeholder {
-  color: #000;
-  line-height: 10;
-  -webkit-transition: line-height 0.5s ease;
-  transition: line-height 0.5s ease;
-}
-.focus-bottom:focus::placeholder {
-  color: #000;
-  line-height: 10;
-  -webkit-transition: line-height 0.5s ease;
-  transition: line-height 0.5s ease;
-}
 html {
   height: 100%;
-  min-height: 100%;
 }
 body {
+  background: #fcfcfc;
   color: #333;
   font-size: 14px;
   font-family: "MullerRegular", sans-serif;
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -2174,12 +2073,7 @@ ol {
 }
 .nav-header .nav-item.active a {
   color: #ffa700;
-}
-.nav-footer .nav-item a {
-  color: #b3b2b2;
-}
-.nav-footer .nav-item.active a {
-  color: #eaeaea;
+  font-family: "MullerExtraBold", sans-serif;
 }
 .phone-header .icon-wrapper {
   -webkit-border-radius: 50%;
@@ -2191,15 +2085,27 @@ ol {
   color: #fff;
   font-size: 14px;
 }
+.nav-footer .nav-item a {
+  color: #b3b2b2;
+}
+.nav-footer .nav-item.active a {
+  color: #eaeaea;
+}
 .footer {
   background: #383838;
   height: 178px;
-  margin-top: 70px;
+  /* position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0; */
 }
 .footer .rights {
   color: #b3b2b2;
   font-family: "GothamProRegular", sans-serif;
   font-size: 10px;
+}
+.page-content {
+  padding: 0 0 50px;
 }
 .section-title {
   color: #626262;

@@ -48,10 +48,6 @@
 		display: inline;
 	}
 }
-.btn-group.open > .dropdown-toggle.btn {
-	background: transparent;
-}
-
 
 :not(.focus-fade) {
 	&::placeholder {
@@ -80,50 +76,21 @@
 	}
 }
 
-
-/* сдвиг placeholder-а вправо при фокусе*/
-.focus-right {
-	&::placeholder {
-		color:#fff;
-		text-indent: 0px;
-		transition: text-indent .8s ease-in-out;
-	}
-	
-	&:focus::placeholder {
-		color: #000;
-		text-indent: 100vw;
-		transition: text-indent 1.6s linear;
-	}
-}
-
-/* сдвиг placeholder-а вниз при фокусе*/
-.focus-bottom {
-	&::placeholder {
-		color:#fff;
-		line-height: normal;
-		transition: line-height 0.5s ease;
-	}
-	
-	&:focus::placeholder {
-		color: #000;
-		line-height: 10;
-		transition: line-height 0.5s ease;
-	}
-}
-
-
-
 html {
 	height: 100%;
-	min-height: 100%;
 }
 body {
+	background: #fcfcfc;
 	color: @default-color;
 	font-size: 14px;
     font-family: @font-mullerregular;
-	height: 100%;
+	min-height: 100%;
     margin: 0;
     padding: 0;
+
+	// display: flex;
+	// min-height: 100vh;
+	// flex-direction: column; 
 }
 
 a {
@@ -181,7 +148,7 @@ ul, ol {
 	background: @brand-primary;
 }
 
-
+// Header
 .header {
 	height: 120px;
 }
@@ -193,6 +160,8 @@ ul, ol {
 		transform: translateY(-38%);
 	}
 }
+
+// гавное меню в шапке и подвале
 .nav-header,
 .nav-footer {
 	font-size: 14px;
@@ -209,19 +178,7 @@ ul, ol {
 		&.active {
 			a {
 				color: @brand-primary;
-			}
-		}
-	}
-}
-
-.nav-footer {
-	.nav-item {
-		a {
-			color: #b3b2b2;
-		}
-		&.active {
-			a {
-				color: #eaeaea;
+				font-family: @font-mullerextrabold;
 			}
 		}
 	}
@@ -237,20 +194,38 @@ ul, ol {
 		font-size: 14px;
 	}
 }
+.nav-footer {
+	.nav-item {
+		a {
+			color: #b3b2b2;
+		}
+		&.active {
+			a {
+				color: #eaeaea;
+			}
+		}
+	}
+}
 
-
-
-
-
+// Footer
 .footer {
 	background: #383838;
 	height: 178px;
-	margin-top: 70px;
+	/* position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0; */
 	.rights {
 		color: #b3b2b2;
 		font-family: @font-gothamproregular;
 		font-size: 10px;
 	}
+}
+
+// основной контент страницы
+.page-content {
+	// flex: 1;
+	padding: 0 0 50px;
 }
 
 
