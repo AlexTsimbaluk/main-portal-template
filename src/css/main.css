@@ -2062,27 +2062,12 @@ ol {
 body .toggle-nav {
   display: none;
   cursor: pointer;
-  margin: 14px 0 0 14px;
+  margin: 0;
   width: 33px;
   height: 30px;
+  left: 3%;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  /* &:active {
-			.first {
-				.transform (@rotate: 45deg, @scale: 1.4, @skew: 0deg, @translateX: 6px, @translateY: 4px);
-			}
-			.second {
-				.transform(@rotate: 0deg, @scale: 1.4, @skew: 0deg, @translateX: 6px, @translateY: 4px);
-				opacity: 0;
-			}
-			.third {
-				.transform (@rotate: -45deg, @scale: 1.4, @skew: 0deg, @translateX: 6px, @translateY: -4px);
-			}
-		
-		} */
-}
-body .toggle-nav [type=checkbox] {
-  display: none;
 }
 body .toggle-nav span {
   display: block;
@@ -2094,9 +2079,9 @@ body .toggle-nav span.first {
   margin-top: 0;
 }
 body.menu-visible .toggle-nav {
-  -webkit-transform: rotate(0deg) scale(0.9) skew(0deg) translateX(0px) translateY(1px);
-  -ms-transform: rotate(0deg) scale(0.9) skew(0deg) translateX(0px) translateY(1px);
-  transform: rotate(0deg) scale(0.9) skew(0deg) translateX(0px) translateY(1px);
+  -webkit-transform: rotate(0deg) scale(0.9) skew(0deg) translateX(0px) translateY(0px);
+  -ms-transform: rotate(0deg) scale(0.9) skew(0deg) translateX(0px) translateY(0px);
+  transform: rotate(0deg) scale(0.9) skew(0deg) translateX(0px) translateY(0px);
 }
 body.menu-visible .toggle-nav .first {
   -webkit-transform: rotate(45deg) scale(1.4) skew(0deg) translateX(5px) translateY(3px);
@@ -2156,10 +2141,6 @@ body.menu-visible .toggle-nav:hover {
 .footer {
   background: #383838;
   height: 178px;
-  /* position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0; */
 }
 .footer .rights {
   color: #b3b2b2;
@@ -2167,6 +2148,9 @@ body.menu-visible .toggle-nav:hover {
   font-size: 10px;
 }
 @media only screen and (max-width: 991px) {
+  .page-content {
+    border-top: 1px solid #ddd;
+  }
   .header {
     height: 90px;
   }
@@ -2203,8 +2187,7 @@ body.menu-visible .toggle-nav:hover {
   body .toggle-nav {
     display: block;
     position: absolute;
-    left: 15px;
-    top: 25px;
+    top: 34px;
     z-index: 2;
   }
   body .nav-header {
@@ -2236,6 +2219,24 @@ body.menu-visible .toggle-nav:hover {
   }
   .nav-item {
     display: block;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .footer {
+    height: 90px;
+  }
+  .logo-header .logo,
+  .logo-footer .logo {
+    width: 50%;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+  .body .toggle-nav {
+    top: 26px;
+  }
+  .body.menu-visible .nav-header {
+    top: 70px;
   }
 }
 .page-content {

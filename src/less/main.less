@@ -152,7 +152,6 @@ ul, ol {
 // Header
 .header {
 	height: 120px;
-	// position: relative;
 }
 .logo-header,
 .logo-footer {
@@ -170,14 +169,15 @@ body {
 		// left: 27px;
 		// top: 34px;
 		cursor: pointer;
-		margin: 14px 0 0 14px;
+		// margin: 14px 0 0 14px;
+		// margin: 3% 0 0 3%;
+		margin: 0;
 		width: 33px;
 		height: 30px;
+		left: 3%;
 		.transitions(all .3s);
+		// transform: translateY(-50%);
 		// z-index: 1;
-		[type=checkbox] {
-			display: none;
-		}
 		span {
 			display: block;
 			height: 1px;
@@ -188,32 +188,12 @@ body {
 				margin-top: 0;
 			}
 		}
-
-		&:hover {
-			// .transform(@rotate: 0deg, @scale: .9);
-		}
-
-		/* &:active {
-			.first {
-				.transform (@rotate: 45deg, @scale: 1.4, @skew: 0deg, @translateX: 6px, @translateY: 4px);
-			}
-			.second {
-				.transform(@rotate: 0deg, @scale: 1.4, @skew: 0deg, @translateX: 6px, @translateY: 4px);
-				opacity: 0;
-			}
-			.third {
-				.transform (@rotate: -45deg, @scale: 1.4, @skew: 0deg, @translateX: 6px, @translateY: -4px);
-			}
-		
-		} */
-
-		// [type=checkbox]: {}
 		&.clicked {
 		}
 	}
 	&.menu-visible {
 		.toggle-nav {
-			.transform (@rotate: 0deg, @scale: .9, @skew: 0deg, @translateX: 0px, @translateY: 1px);
+			.transform (@rotate: 0deg, @scale: .9, @skew: 0deg, @translateX: 0px, @translateY: 0px);
 
 			.first {
 				.transform (@rotate: 45deg, @scale: 1.4, @skew: 0deg, @translateX: 5px, @translateY: 3px);
@@ -258,7 +238,6 @@ body {
 	}
 }
 
-
 .phone-header {
 	.icon-wrapper {
 		border-radius: 50%;
@@ -288,10 +267,6 @@ body {
 .footer {
 	background: #383838;
 	height: 178px;
-	/* position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0; */
 	.rights {
 		color: #b3b2b2;
 		font-family: @font-gothamproregular;
@@ -300,6 +275,9 @@ body {
 }
 
 @media only screen and (max-width : 991px) {
+	.page-content {
+		border-top: 1px solid #ddd;
+	}
 	.header {
 		height: 90px;
 		.nav {
@@ -337,8 +315,11 @@ body {
 		.toggle-nav {
 			display: block;
 			position: absolute;
-			left: 15px;
-			top: 25px;
+			// left: 15px;
+			// left: 0;
+			// top: 25px;
+			// top: 0;
+			top: 34px;
 			z-index: 2;
 		}
 		.nav-header {
@@ -378,6 +359,33 @@ body {
 
 	.nav-item {
 		display: block;
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	// .header,
+	.footer {
+		height: 90px;
+	}
+
+	.logo-header,
+	.logo-footer {
+		
+		.logo {
+			width: 50%;
+			transform: none;
+		}
+	}
+
+	.body {
+		.toggle-nav {
+			top: 26px;
+		}
+		&.menu-visible {
+			.nav-header {
+				top: 70px;
+			}
+		}
 	}
 }
 
