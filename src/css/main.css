@@ -2137,6 +2137,35 @@ body.menu-visible .toggle-nav:hover {
   color: #ffa700;
   font-family: "MullerExtraBold", sans-serif;
 }
+.phone-header .icon-wrapper {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+.phone-header .icon {
+  color: #fff;
+  font-size: 14px;
+}
+.nav-footer .nav-item a {
+  color: #b3b2b2;
+}
+.nav-footer .nav-item.active a {
+  color: #eaeaea;
+}
+.footer {
+  background: #383838;
+  height: 178px;
+  /* position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0; */
+}
+.footer .rights {
+  color: #b3b2b2;
+  font-family: "GothamProRegular", sans-serif;
+  font-size: 10px;
+}
 @media only screen and (max-width: 991px) {
   .header {
     height: 90px;
@@ -2149,11 +2178,24 @@ body.menu-visible .toggle-nav:hover {
     z-index: 1;
     overflow-y: hidden;
   }
-  .logo-header a {
+  .footer {
+    height: 120px;
+  }
+  .footer .nav {
+    display: none;
+  }
+  .footer .rights {
+    text-align: center;
+  }
+  .logo-header a,
+  .logo-footer a {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
   }
-  .logo-header .logo {
+  .logo-header .logo,
+  .logo-footer .logo {
+    width: 70%;
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
@@ -2195,35 +2237,6 @@ body.menu-visible .toggle-nav:hover {
   .nav-item {
     display: block;
   }
-}
-.phone-header .icon-wrapper {
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  width: 25px;
-  height: 25px;
-}
-.phone-header .icon {
-  color: #fff;
-  font-size: 14px;
-}
-.nav-footer .nav-item a {
-  color: #b3b2b2;
-}
-.nav-footer .nav-item.active a {
-  color: #eaeaea;
-}
-.footer {
-  background: #383838;
-  height: 178px;
-  /* position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0; */
-}
-.footer .rights {
-  color: #b3b2b2;
-  font-family: "GothamProRegular", sans-serif;
-  font-size: 10px;
 }
 .page-content {
   padding: 0 0 50px;

@@ -258,13 +258,51 @@ body {
 	}
 }
 
+
+.phone-header {
+	.icon-wrapper {
+		border-radius: 50%;
+		width: 25px;
+		height: 25px;
+	}
+	.icon {
+		color: #fff;
+		font-size: 14px;
+	}
+}
+
+.nav-footer {
+	.nav-item {
+		a {
+			color: #b3b2b2;
+		}
+		&.active {
+			a {
+				color: #eaeaea;
+			}
+		}
+	}
+}
+
+// Footer
+.footer {
+	background: #383838;
+	height: 178px;
+	/* position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0; */
+	.rights {
+		color: #b3b2b2;
+		font-family: @font-gothamproregular;
+		font-size: 10px;
+	}
+}
+
 @media only screen and (max-width : 991px) {
 	.header {
 		height: 90px;
 		.nav {
-			// width: 100vh;
-			// height: 100vh;
-			// position: fixed;
 			left: 0;
 			right: 0;
 			top: 0;
@@ -273,12 +311,24 @@ body {
 			overflow-y: hidden;
 		}
 	}
-	.logo-header {
+	.footer {
+		height: 120px;
+		.nav {
+			display: none;
+		}
+		.rights {
+			text-align: center;
+		}
+	}
+	.logo-header,
+	.logo-footer {
 		a {
 			margin-left: auto;
 			margin-right: auto;
+			text-align: center;
 		}
 		.logo {
+			width: 70%;
 			transform: none;
 		}
 	}
@@ -329,53 +379,8 @@ body {
 	.nav-item {
 		display: block;
 	}
-
-	.toggle-nav {
-	}
-}
-.phone-header {
-	.icon-wrapper {
-		border-radius: 50%;
-		width: 25px;
-		height: 25px;
-	}
-	.icon {
-		color: #fff;
-		font-size: 14px;
-	}
 }
 
-@media only screen and (max-width : 1200px) {
-
-}
-
-.nav-footer {
-	.nav-item {
-		a {
-			color: #b3b2b2;
-		}
-		&.active {
-			a {
-				color: #eaeaea;
-			}
-		}
-	}
-}
-
-// Footer
-.footer {
-	background: #383838;
-	height: 178px;
-	/* position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0; */
-	.rights {
-		color: #b3b2b2;
-		font-family: @font-gothamproregular;
-		font-size: 10px;
-	}
-}
 
 // основной контент страницы
 .page-content {
