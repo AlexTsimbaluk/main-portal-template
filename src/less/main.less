@@ -448,11 +448,11 @@ body {
 	}
 }
 
-.banner-title {
+/* .banner-title {
 	color: #fff;
 	font-family: @font-mullerbold;
 	font-size: 30px;
-}
+} */
 
 .main-title {
 	color: @brand-primary;
@@ -476,7 +476,29 @@ body {
 	width: 84%;
 }
 
-
+// index.html - главная
+.banner-main {
+	background-color: #293b4e;
+	background-image: url('../img/banner-main.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30% auto;
+	color: #fff;
+	height: 320px;
+	margin-bottom: 30px;
+	// padding: 50px 0;
+	.banner-title {
+		font-family: @font-gothamproregular;
+		font-size: 50px;
+	}
+	.more-info {
+		border: 2px solid #fff;
+		border-radius: 4px;
+		color: #fff;
+		margin-top: 20px;
+		padding: 4px 8px; 
+	}
+}
 
 // about.html
 .banner-about {
@@ -485,6 +507,11 @@ body {
 	// margin-bottom: 50px;
 	.banner-content {
 		padding-right: 100px;
+	}
+	.banner-title {
+		color: #fff;
+		font-family: @font-mullerbold;
+		font-size: 30px;
 	}
 }
 

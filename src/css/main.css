@@ -2291,11 +2291,11 @@ body.menu-visible .toggle-nav:hover {
     margin-bottom: 10vmin;
   }
 }
-.banner-title {
-  color: #fff;
-  font-family: "MullerBold", sans-serif;
-  font-size: 30px;
-}
+/* .banner-title {
+	color: #fff;
+	font-family: @font-mullerbold;
+	font-size: 30px;
+} */
 .main-title {
   color: #ffa700;
   font-family: "MullerBold", sans-serif;
@@ -2315,12 +2315,39 @@ body.menu-visible .toggle-nav:hover {
   margin: 0 auto;
   width: 84%;
 }
+.banner-main {
+  background-color: #293b4e;
+  background-image: url('../img/banner-main.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30% auto;
+  color: #fff;
+  height: 320px;
+  margin-bottom: 30px;
+}
+.banner-main .banner-title {
+  font-family: "GothamProRegular", sans-serif;
+  font-size: 50px;
+}
+.banner-main .more-info {
+  border: 2px solid #fff;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  color: #fff;
+  margin-top: 20px;
+  padding: 4px 8px;
+}
 .banner-about {
   background: url('../img/banner-about.jpg') no-repeat center / cover;
   height: 370px;
 }
 .banner-about .banner-content {
   padding-right: 100px;
+}
+.banner-about .banner-title {
+  color: #fff;
+  font-family: "MullerBold", sans-serif;
+  font-size: 30px;
 }
 .connection-order .item-number {
   color: #ffa700;
