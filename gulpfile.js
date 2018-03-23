@@ -3,6 +3,7 @@ var gulp = require('gulp'),
 	babel = require("gulp-babel"),
 	del = require('del'),
 	less = require('gulp-less'),
+	lessToScss = require('gulp-less-to-scss'),
 	autoprefixer = require('gulp-autoprefixer'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglifyjs'),
@@ -12,7 +13,11 @@ var gulp = require('gulp'),
 	;
 
 
-
+gulp.task('lessToScss',function(){
+    gulp.src('src/less/*.less')
+        .pipe(lessToScss())
+        .pipe(gulp.dest('src/scss'));
+});
 
 gulp.task('clean', function() {
 	'use strict';
@@ -151,7 +156,7 @@ gulp.task('watch', ['browser-sync'], function() {
 	gulp.watch([
 			'src/less/*.less',
 			'src/libs/bootstrap-material-design-master/less/*.less'
-		], ['less']);
+		], ['less', 'lessToScss']);
 	
 
 	gulp.watch('src/libs/utils/*.less', ['utils']);

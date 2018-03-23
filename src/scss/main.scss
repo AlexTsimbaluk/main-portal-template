@@ -1,0 +1,671 @@
+@import '_fonts.scss';
+@import '_func.scss';
+// @import '_vars.scss';
+// @import '_default.scss';
+// @import '_forms.scss';
+
+@import '../libs/bootstrap-material-design-master/scss/bootstrap-material-design.scss';
+
+$brand-primary: #ffa700;
+$default-color: #333;
+
+
+// fonts
+$font-sfui: "SFUIDisplay-Light", sans-serif;
+
+$font-mullerregular: "MullerRegular", sans-serif;
+$font-mullermedium: "MullerMedium", sans-serif;
+$font-mullerbold: "MullerBold", sans-serif;
+$font-mullerextrabold: "MullerExtraBold", sans-serif;
+$font-mullerheavy: "MullerHeavy", sans-serif;
+
+$font-gothamproregular: "GothamProRegular", sans-serif;
+
+
+
+
+// Prevent highlight on mobile
+* {
+	margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+    &:focus {
+        outline: 0;
+    }
+}
+
+.btn,
+.btn:not(.btn-raised) {
+	color: inherit;
+	display: inherit;
+	font-size: inherit;
+	text-align: inherit;
+	text-transform: inherit;
+	margin: inherit;
+	padding: inherit;
+	width: inherit;
+	&img {
+		display: inline;
+	}
+}
+
+:not(.focus-fade) {
+	&::placeholder {
+		color:#fff;
+		text-overflow:ellipsis;
+	} 
+
+	&:focus::placeholder {
+		color: transparent;
+	}
+}
+
+
+/* плавное изменение прозрачности  placeholder-а при фокусе */
+.focus-fade {
+	&::placeholder {
+		color:#fff;
+		opacity: 1;
+		transition: opacity .3s ease;
+	}
+	
+	&:focus::placeholder {
+		color: #000;
+		opacity: 0;
+		transition: opacity .3s ease;
+	}
+}
+
+html {
+	height: 100%;
+}
+body {
+	background: #fcfcfc;
+	color: $default-color;
+	font-size: 14px;
+    font-family: $font-mullerregular;
+	min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+	// display: flex;
+	// min-height: 100vh;
+	// flex-direction: column; 
+}
+
+a {
+    color: #000;
+    &:visited,
+    &:hover,
+    &:focus,
+    &:active {
+        color: #000;
+        outline: none;
+        text-decoration: none;
+    }
+}
+input:focus {outline: none;}
+
+// Уберем синюю дефолтную рамку вокруг контролов
+// и подчеркивание у активных ссылок,
+a,
+button,
+.control-button,
+.menu-button,
+.btn {
+    outline: none;
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus {
+        outline: none;
+        text-decoration: none;
+    }
+}
+// а также у инпутов
+input[type=file],
+input[type=checkbox],
+input[type=radio] {
+	&:focus {
+		outline: none;
+	}
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+.hidden {
+	display: none;
+	opacity: 0;
+}
+
+
+.brand-primary {
+	color: $brand-primary;
+}
+.brand-bg {
+	background: $brand-primary;
+}
+
+// Header
+.header {
+	height: 120px;
+}
+.logo-header,
+.logo-footer {
+	.logo {
+		width: 100%;
+		height: auto;
+		transform: translateY(-24%);
+	}
+}
+
+body {
+	.toggle-nav {
+		display: none;
+		// position: absolute;
+		// left: 27px;
+		// top: 34px;
+		cursor: pointer;
+		// margin: 14px 0 0 14px;
+		// margin: 3% 0 0 3%;
+		margin: 0;
+		width: 33px;
+		height: 30px;
+		left: 3%;
+		@include transitions(all .3s);
+		// transform: translateY(-50%);
+		// z-index: 1;
+		span {
+			display: block;
+			height: 1px;
+			background-color: $brand-primary;
+			margin: 9px 0 0;
+
+			&.first {
+				margin-top: 0;
+			}
+		}
+		&.clicked {
+		}
+	}
+	&.menu-visible {
+		.toggle-nav {
+			@include transform($rotate: 0deg, $scale: .9, $skew: 0deg, $translateX: 0px, $translateY: 0px);
+
+			.first {
+				@include transform($rotate: 45deg, $scale: 1.4, $skew: 0deg, $translateX: 5px, $translateY: 3px);
+			}
+			.second {
+				@include transform($rotate: 0deg, $scale: 1, $skew: 0deg, $translateX: 0, $translateY: -12px);
+				opacity: 0;
+				height: 40px;
+				margin: 0;
+			}
+			.third {
+				@include transform($rotate: -45deg, $scale: 1.4, $skew: 0deg, $translateX: 22px, $translateY: -20px);
+			}
+
+			&:hover {
+				@include transform($rotate: 0deg, $scale: .8);
+			}
+		}
+	}
+}
+
+// гавное меню в шапке и подвале
+.nav-header,
+.nav-footer {
+	font-size: 14px;
+	.nav-item {
+		margin: 0 auto;
+		text-transform: uppercase;
+	}
+}
+.nav-header {
+	.nav-item {
+		a {
+			color: #626262;
+		}
+		&.active {
+			a {
+				color: $brand-primary;
+				font-family: $font-mullerextrabold;
+			}
+		}
+	}
+}
+
+.phone-header {
+	.icon-wrapper {
+		border-radius: 50%;
+		width: 25px;
+		height: 25px;
+	}
+	.icon {
+		color: #fff;
+		font-size: 14px;
+	}
+}
+
+.nav-footer {
+	.nav-item {
+		a {
+			color: #b3b2b2;
+		}
+		&.active {
+			a {
+				color: #eaeaea;
+			}
+		}
+	}
+}
+
+// Footer
+.footer {
+	background: #383838;
+	height: 178px;
+	.rights {
+		color: #b3b2b2;
+		font-family: $font-gothamproregular;
+		font-size: 10px;
+	}
+}
+
+@media only screen and (max-width : 991px) {
+	.page-content {
+		border-top: 1px solid #ddd;
+	}
+	.header {
+		height: 90px;
+		.nav {
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: 1;
+			overflow-y: hidden;
+		}
+	}
+	.footer {
+		height: 120px;
+		.nav {
+			display: none;
+		}
+		.rights {
+			text-align: center;
+		}
+	}
+	.logo-header,
+	.logo-footer {
+		a {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
+		.logo {
+			width: 70%;
+			transform: none;
+		}
+	}
+
+	body {
+		.toggle-nav {
+			display: block;
+			position: absolute;
+			// left: 15px;
+			// left: 0;
+			// top: 25px;
+			// top: 0;
+			top: 34px;
+			z-index: 2;
+		}
+		.nav-header {
+			opacity: 0;
+			// display: none;
+			// top: -100%;
+			transition: opacity .3s;
+		}
+		&.menu-visible {
+			.page-content {
+				overflow-y: hidden;
+				height: 0;
+				// transition: height .3s;
+			}
+			.nav-header {
+				background: #fff;
+				border-top: 1px solid #ddd;
+				display: block;
+				padding-top: 10px;
+				opacity: 1;
+				
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 90px;
+				// top: 12%;
+				bottom: 0;
+				overflow-y: visible;
+				.nav-item {
+					height: auto;
+					text-align: center;
+					padding: 16px 0;
+				}
+			}
+		}
+	}
+
+	.nav-item {
+		display: block;
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	// .header,
+	.footer {
+		height: 90px;
+	}
+
+	.logo-header,
+	.logo-footer {
+		
+		.logo {
+			width: 50%;
+			transform: none;
+		}
+	}
+
+	.body {
+		.toggle-nav {
+			top: 26px;
+		}
+		&.menu-visible {
+			.nav-header {
+				top: 70px;
+			}
+		}
+	}
+}
+
+
+// основной контент страницы
+.page-content {
+	// flex: 1;
+	padding: 0 0 50px;
+}
+
+
+
+.section {
+	padding-top: 66px;
+}
+
+.section-title-wrapper {
+	position: relative;
+	.to-back {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		z-index: 1;
+		// transform: translateY(100%);
+		a {
+			color: #626262;
+		}
+		@media (max-width: 767px) {
+			position: static;
+		}
+	}
+}
+
+.section-title {
+	color:  #626262;
+	font-size: 30px;
+	font-family: $font-mullermedium;
+	font-weight: normal;
+	margin-bottom: 80px;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	&:after {
+		background: $brand-primary;
+		content: '';
+		display: block;
+		width: 120px;
+		height: 3px;
+		position: absolute;
+		text-align: center;
+		left: 50%;
+		bottom: -50%;
+		transform: translateX(-50%);
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 10vmin;
+		&:after {
+
+		}
+	}
+}
+
+/* .banner-title {
+	color: #fff;
+	font-family: $font-mullerbold;
+	font-size: 30px;
+} */
+
+.main-title {
+	color: $brand-primary;
+	font-family: $font-mullerbold;
+	font-size: 30px;
+	margin: 50px 0 30px;
+	.title-detail {
+		color: $default-color;
+		font-family: $font-mullerregular;
+		font-size: 20px;
+	}
+}
+
+.extra-title {
+	font-family: $font-mullerbold;
+	font-size: 20px;
+}
+
+.section-content {
+	margin: 0 auto;
+	width: 84%;
+}
+
+// index.html - главная
+.banner-main {
+	background-color: #293b4e;
+	background-image: url('../img/banner-main.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30% auto;
+	color: #fff;
+	height: 320px;
+	margin-bottom: 30px;
+	// padding: 50px 0;
+	.banner-title {
+		font-family: $font-gothamproregular;
+		font-size: 50px;
+	}
+	.more-info {
+		border: 2px solid #fff;
+		border-radius: 4px;
+		color: #fff;
+		margin-top: 20px;
+		padding: 4px 8px; 
+	}
+}
+
+// about.html
+.banner-about {
+	background: url('../img/banner-about.jpg') no-repeat center / cover;
+	height: 370px;
+	// margin-bottom: 50px;
+	.banner-content {
+		padding-right: 100px;
+	}
+	.banner-title {
+		color: #fff;
+		font-family: $font-mullerbold;
+		font-size: 30px;
+	}
+}
+
+.connection-order {
+	.item-number {
+		color: $brand-primary;
+		font-family: $font-mullerheavy;
+		font-size: 40px;
+		padding-right: 10px;
+		position: relative;
+		top: 2px;
+	}
+	.item-link {
+		color: $brand-primary;
+		text-decoration: underline;
+	}
+}
+
+.connection-details {
+	margin-top: 20px;
+}
+
+
+// news.html - все новости
+#news-list {
+	.page-content {
+		background: #f6f6f6;
+	}
+}
+
+.news-list {
+	.news-item-wrapper {
+		margin-bottom: 100px;
+		padding: 15px;
+	}
+	.news-item {
+		background: #fff;
+		border-radius: 10px;
+		box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15);
+		height: 406px;
+	}
+	.news-item-image {
+		width: 100%;
+	}
+	.news-item-content {
+		padding: 35px 12px;
+		position: relative;
+	}
+	.news-title {
+		color:  #626262;
+		font-family: $font-mullermedium;
+		font-size: 18px;
+	}
+	.news-summary {
+		color:  #626262;
+		font-family: $font-mullerregular;
+		font-size: 14px;
+		margin: 35px 0;
+	}
+	.news-more {
+		color:  $brand-primary;
+		font-family: $font-mullermedium;
+		font-size: 12px;
+		position: absolute;
+		bottom: 45px;
+	}
+}
+
+.news-pagination {
+	display: inline-block;
+	margin-right: 15px;
+	.pager-item {
+		display: inline-block;
+		margin-right: 2px;
+		a {
+			color:  #626262;
+			font-family: $font-mullermedium;
+			font-size: 16px;
+		}
+		&.active {
+			a {
+				color: $brand-primary;
+				font-family: $font-mullerbold;
+			}
+		}
+	}
+}
+
+
+
+// news-inside - страница новости внутри
+#news-inside {
+	.page-content {
+		background: #f6f6f6;
+	}
+}
+
+.news-full {
+	background:  #fff;
+	border-radius: 10px;
+	box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15);
+	// height: 685px;
+	.news-banner {
+		background: #0a090f;
+		padding-left: 9%;
+		@media (max-width: 767px) {
+			padding-left: 0;
+			.news-main-title {
+				text-align: center;
+			}
+		}
+	}
+	.news-main-title {
+		color:  #fff;
+		font-family: $font-mullermedium;
+		font-size: 50px;
+		@media (max-width: 991px) {
+			font-size: 5vmin;
+			padding: 2vmin;
+		}
+	}
+	.news-full-image {
+		width: 54%;
+		@media (max-width: 767px) {
+			width: 35%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.news-content {
+		padding: 3% 3% 3% 9%;
+	}
+	.news-extra-title {
+		color:  $brand-primary;
+		font-family: $font-mullerbold;
+		font-size: 25px;
+	}
+	.news-descr {
+		p {
+			color: #626262;
+			font-size: 16px;
+			margin: 30px 0 0;
+		}
+	}
+	.news-date {
+		color: #7d7d7d;
+		font-size: 16px;
+	}
+
+	+ .section-title {
+		margin-top: 75px;
+	}
+}
+
+.news-in-topic {
+	@include news-list;
+}
