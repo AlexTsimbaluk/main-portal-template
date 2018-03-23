@@ -79,6 +79,21 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'GothamProLight';
+    src: url('../fonts/GothamProLight.otf');
+    src: url('../fonts/GothamProLight.otf') format('embedded-opentype'),
+         url('../fonts/GothamProLight.otf') format('woff'),
+         url('../fonts/GothamProLight.otf') format('truetype'),
+         url('../fonts/GothamProLight.otf') format('svg');
+    src: local('GothamProLight'),
+         url('../fonts/GothamProLight.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 
 @font-face {
     font-family: 'Material Icons';

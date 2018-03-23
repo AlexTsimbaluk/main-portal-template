@@ -20,6 +20,7 @@
 @font-mullerheavy: "MullerHeavy", sans-serif;
 
 @font-gothamproregular: "GothamProRegular", sans-serif;
+@font-gothamprolight: "GothamProLight", sans-serif;
 
 
 
@@ -393,23 +394,28 @@ body {
 // основной контент страницы
 .page-content {
 	// flex: 1;
-	padding: 0 0 50px;
+	// padding: 0 0 50px;
 }
 
 
 
 .section {
-	padding-top: 66px;
+	// padding-top: 66px;
 }
 
 .section-title-wrapper {
 	position: relative;
-	.to-back {
+	.extra-link {
 		position: absolute;
-		left: 0;
 		top: 50%;
 		z-index: 1;
 		// transform: translateY(100%);
+		&.left {
+			left: 0;
+		}
+		&.right {
+			right: 0;
+		}
 		a {
 			color: #626262;
 		}
@@ -424,7 +430,7 @@ body {
 	font-size: 30px;
 	font-family: @font-mullermedium;
 	font-weight: normal;
-	margin-bottom: 80px;
+	margin: 70px 0 80px;
 	text-align: center;
 	text-transform: uppercase;
 	position: relative;
@@ -476,29 +482,114 @@ body {
 	width: 84%;
 }
 
+
+
+
+
 // index.html - главная
-.banner-main {
+#main {
+	.consumers {
+		margin: 30px 0 50px;
+		padding: 0;
+	}
+	.news-list {
+		background: #f3f3f3;
+	}
+}
+
+.banner-nowtaxi {
 	background-color: #293b4e;
-	background-image: url('../img/banner-main.png');
+	background-image: url('../img/banner-nowtaxi.png');
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 30% auto;
+	background-size: 40% auto;
 	color: #fff;
-	height: 320px;
-	margin-bottom: 30px;
-	// padding: 50px 0;
+	// height: 320px;
+	// margin-bottom: 30px;
+	padding: 110px 0;
 	.banner-title {
-		font-family: @font-gothamproregular;
-		font-size: 50px;
+		font-family: @font-gothamprolight;
+		font-size: 70px;
+	}
+	.banner-descr {
+		font-family: @font-mullerregular;
+		font-size: 20px;
+		margin: -10px 0 50px 0;
 	}
 	.more-info {
 		border: 2px solid #fff;
-		border-radius: 4px;
+		border-radius: 8px;
 		color: #fff;
-		margin-top: 20px;
-		padding: 4px 8px; 
+		padding: 10px 30px; 
 	}
 }
+
+.product-consumer {
+	height: 120px;
+	.consumer {
+		margin: 0 auto;
+		.consumer-image {
+			width: 50%;
+		}
+		.consumer-title {
+			text-align: center;
+		}
+	}
+}
+
+.banner-download {
+	background-color: #292929;
+	// background-image: url('../img/banner-download.png');
+	// background-repeat: no-repeat;
+	// background-position: -15% 145%;
+	// background-size: 40% auto;
+	color: #fff;
+	// margin-bottom: 30px;
+	// padding: 110px 0;
+	height: 430px;
+	.container {
+		position: relative;
+	}
+	.banner-bg {
+		background-image: url('../img/banner-download.png');
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: contain;
+		position: absolute;
+		left: -200px;
+		top: -6%;
+	}
+	.flex {
+		> .banner-bg {
+			height: 130%;
+		}
+		> .banner-content {
+			height: auto;
+		}
+	}
+	.banner-content {
+		padding: 20px 0;
+		position: relative;
+		z-index: 1;
+	}
+	.banner-title {
+		font-family: @font-gothamprolight;
+		font-size: 70px;
+	}
+	.banner-descr {
+		font-family: @font-mullerregular;
+		font-size: 20px;
+		margin: -10px 0 50px 0;
+	}
+	.more-info {
+		border: 2px solid #fff;
+		border-radius: 8px;
+		color: #fff;
+		padding: 10px 30px; 
+	}
+}
+
+
 
 // about.html
 .banner-about {

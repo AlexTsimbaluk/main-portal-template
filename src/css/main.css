@@ -47,6 +47,14 @@
   font-style: normal;
 }
 @font-face {
+  font-family: 'GothamProLight';
+  src: url('../fonts/GothamProLight.otf');
+  src: url('../fonts/GothamProLight.otf') format('embedded-opentype'), url('../fonts/GothamProLight.otf') format('woff'), url('../fonts/GothamProLight.otf') format('truetype'), url('../fonts/GothamProLight.otf') format('svg');
+  src: local('GothamProLight'), url('../fonts/GothamProLight.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
@@ -2239,26 +2247,25 @@ body.menu-visible .toggle-nav:hover {
     top: 70px;
   }
 }
-.page-content {
-  padding: 0 0 50px;
-}
-.section {
-  padding-top: 66px;
-}
 .section-title-wrapper {
   position: relative;
 }
-.section-title-wrapper .to-back {
+.section-title-wrapper .extra-link {
   position: absolute;
-  left: 0;
   top: 50%;
   z-index: 1;
 }
-.section-title-wrapper .to-back a {
+.section-title-wrapper .extra-link.left {
+  left: 0;
+}
+.section-title-wrapper .extra-link.right {
+  right: 0;
+}
+.section-title-wrapper .extra-link a {
   color: #626262;
 }
 @media (max-width: 767px) {
-  .section-title-wrapper .to-back {
+  .section-title-wrapper .extra-link {
     position: static;
   }
 }
@@ -2267,7 +2274,7 @@ body.menu-visible .toggle-nav:hover {
   font-size: 30px;
   font-family: "MullerMedium", sans-serif;
   font-weight: normal;
-  margin-bottom: 80px;
+  margin: 70px 0 80px;
   text-align: center;
   text-transform: uppercase;
   position: relative;
@@ -2315,27 +2322,93 @@ body.menu-visible .toggle-nav:hover {
   margin: 0 auto;
   width: 84%;
 }
-.banner-main {
+#main .consumers {
+  margin: 30px 0 50px;
+  padding: 0;
+}
+#main .news-list {
+  background: #f3f3f3;
+}
+.banner-nowtaxi {
   background-color: #293b4e;
-  background-image: url('../img/banner-main.png');
+  background-image: url('../img/banner-nowtaxi.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 30% auto;
+  background-size: 40% auto;
   color: #fff;
-  height: 320px;
-  margin-bottom: 30px;
+  padding: 110px 0;
 }
-.banner-main .banner-title {
-  font-family: "GothamProRegular", sans-serif;
-  font-size: 50px;
+.banner-nowtaxi .banner-title {
+  font-family: "GothamProLight", sans-serif;
+  font-size: 70px;
 }
-.banner-main .more-info {
+.banner-nowtaxi .banner-descr {
+  font-family: "MullerRegular", sans-serif;
+  font-size: 20px;
+  margin: -10px 0 50px 0;
+}
+.banner-nowtaxi .more-info {
   border: 2px solid #fff;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
   color: #fff;
-  margin-top: 20px;
-  padding: 4px 8px;
+  padding: 10px 30px;
+}
+.product-consumer {
+  height: 120px;
+}
+.product-consumer .consumer {
+  margin: 0 auto;
+}
+.product-consumer .consumer .consumer-image {
+  width: 50%;
+}
+.product-consumer .consumer .consumer-title {
+  text-align: center;
+}
+.banner-download {
+  background-color: #292929;
+  color: #fff;
+  height: 430px;
+}
+.banner-download .container {
+  position: relative;
+}
+.banner-download .banner-bg {
+  background-image: url('../img/banner-download.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  position: absolute;
+  left: -200px;
+  top: -6%;
+}
+.banner-download .flex > .banner-bg {
+  height: 130%;
+}
+.banner-download .flex > .banner-content {
+  height: auto;
+}
+.banner-download .banner-content {
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+}
+.banner-download .banner-title {
+  font-family: "GothamProLight", sans-serif;
+  font-size: 70px;
+}
+.banner-download .banner-descr {
+  font-family: "MullerRegular", sans-serif;
+  font-size: 20px;
+  margin: -10px 0 50px 0;
+}
+.banner-download .more-info {
+  border: 2px solid #fff;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  color: #fff;
+  padding: 10px 30px;
 }
 .banner-about {
   background: url('../img/banner-about.jpg') no-repeat center / cover;
