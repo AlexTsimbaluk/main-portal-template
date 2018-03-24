@@ -2329,6 +2329,18 @@ body.menu-visible .toggle-nav:hover {
 #main .news-list {
   background: #f3f3f3;
 }
+.button,
+a.button {
+  background: transparent;
+  border: 2px solid #fff;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  color: #fff;
+  display: inline-block;
+  font-family: "MullerMedium", sans-serif;
+  font-size: 16px;
+  padding: 11px 42px;
+}
 .banner-nowtaxi {
   background-color: #293b4e;
   background-image: url('../img/banner-nowtaxi.png');
@@ -2346,13 +2358,6 @@ body.menu-visible .toggle-nav:hover {
   font-family: "MullerRegular", sans-serif;
   font-size: 20px;
   margin: -10px 0 50px 0;
-}
-.banner-nowtaxi .more-info {
-  border: 2px solid #fff;
-  -webkit-border-radius: 8px;
-          border-radius: 8px;
-  color: #fff;
-  padding: 10px 30px;
 }
 .product-consumer {
   height: 120px;
@@ -2400,15 +2405,35 @@ body.menu-visible .toggle-nav:hover {
 }
 .banner-download .banner-descr {
   font-family: "MullerRegular", sans-serif;
-  font-size: 20px;
-  margin: -10px 0 50px 0;
+  font-size: 60px;
+  line-height: 1.20;
+}
+.banner-download .banner-descr .app-name {
+  font-family: "MullerBold", sans-serif;
 }
 .banner-download .more-info {
-  border: 2px solid #fff;
-  -webkit-border-radius: 8px;
-          border-radius: 8px;
-  color: #fff;
-  padding: 10px 30px;
+  background: #ffa700;
+  border: 0;
+  margin: 24px 0 0 100px;
+}
+.achieve-list .achieve-item {
+  font-size: 18px;
+  padding: 0 0 0 80px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.achieve-list .achieve-item:before {
+  background: url('../img/case-presentation.png') no-repeat center / cover;
+  content: "";
+  display: block;
+  width: 54px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .banner-about {
   background: url('../img/banner-about.jpg') no-repeat center / cover;
