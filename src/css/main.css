@@ -2564,6 +2564,19 @@ a.button {
 .our-clients .clients .client-item img {
   width: 100%;
 }
+.contacts-vacancies .nav-tab .tab-item {
+  display: inline-block;
+  padding: 10px 15px;
+}
+.contacts-vacancies .nav-tab .tab-item.active a {
+  color: #ffa700;
+}
+.contacts-vacancies .extra-title {
+  margin-bottom: 20px;
+}
+.contacts-vacancies .tab-contacts .contact-item {
+  margin-bottom: 80px;
+}
 .banner-about {
   background: url('../img/banner-about.jpg') no-repeat center / cover;
   height: 370px;

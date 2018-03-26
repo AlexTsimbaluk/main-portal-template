@@ -758,13 +758,41 @@ a.button {
 	margin-bottom: 70px;
 	.clients {
 		.client-item {
-				margin: 0 auto;
-			+ .client-item {
-			}
+			margin: 0 auto;
 			width: 150px;
 			img {
 				width: 100%;
 			}
+		}
+	}
+}
+
+
+
+
+
+
+// contacts.html
+.contacts-vacancies {
+	.nav-tab {
+		.tab-item {
+			display: inline-block;
+			padding: 10px 15px;
+			&.active {
+				a {
+					color: $brand-primary;
+				}
+			}
+		}
+	}
+
+	.extra-title {
+		margin-bottom: 20px;
+	}
+
+	.tab-contacts {
+		.contact-item {
+			margin-bottom: 80px;
 		}
 	}
 }
