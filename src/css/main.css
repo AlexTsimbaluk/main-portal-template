@@ -788,11 +788,11 @@ a.button {
 .our-clients .clients .client-item img {
   width: 100%;
 }
-.contacts-vacancies .nav-tab .tab-item {
+.nav-tab .tab-item {
   display: inline-block;
   padding: 10px 15px;
 }
-.contacts-vacancies .nav-tab .tab-item.active a {
+.nav-tab .tab-item.active a {
   color: #ffa700;
   font-family: "MullerExtraBold", sans-serif;
 }
