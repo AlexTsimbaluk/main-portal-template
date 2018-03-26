@@ -480,6 +480,9 @@ body {
 .section-content {
 	margin: 0 auto;
 	width: 84%;
+	@media (max-width: 767px) {
+		width: 100%;
+	}
 }
 
 
@@ -774,6 +777,7 @@ a.button {
 
 // contacts.html
 .contacts-vacancies {
+	// margin-bottom: 80px;
 	.nav-tab {
 		.tab-item {
 			display: inline-block;
@@ -790,9 +794,16 @@ a.button {
 		margin-bottom: 20px;
 	}
 
+	.tab-vacancies,
 	.tab-contacts {
-		.contact-item {
+		.item {
 			margin-bottom: 80px;
+		}
+	}
+	.tab-vacancies {
+		a {
+			color: $brand-primary;
+			text-decoration: underline;
 		}
 	}
 }
