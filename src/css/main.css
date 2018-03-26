@@ -2575,6 +2575,7 @@ a.button {
 }
 .contacts-vacancies .nav-tab .tab-item.active a {
   color: #ffa700;
+  font-family: "MullerExtraBold", sans-serif;
 }
 .contacts-vacancies .extra-title {
   margin-bottom: 20px;
@@ -2582,6 +2583,9 @@ a.button {
 .contacts-vacancies .tab-vacancies .item,
 .contacts-vacancies .tab-contacts .item {
   margin-bottom: 80px;
+}
+.contacts-vacancies .tab-contacts a {
+  font-family: "MullerMedium", sans-serif;
 }
 .contacts-vacancies .tab-vacancies a {
   color: #ffa700;
