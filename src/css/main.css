@@ -2359,14 +2359,12 @@ a.button {
   font-size: 20px;
   margin: -10px 0 50px 0;
 }
-.product-consumer {
-  height: 120px;
-}
 .product-consumer .consumer {
+  height: 120px;
   margin: 0 auto;
 }
 .product-consumer .consumer .consumer-image {
-  width: 50%;
+  width: auto;
 }
 .product-consumer .consumer .consumer-title {
   text-align: center;
@@ -2416,6 +2414,30 @@ a.button {
   border: 0;
   margin: 24px 0 0 100px;
 }
+.why-we {
+  margin-bottom: 120px;
+}
+.achievements {
+  position: relative;
+}
+.achievements:after {
+  background-image: url('../img/case-presentation.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 50% auto;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media (max-width: 991px) {
+  .achievements:after {
+    display: none;
+  }
+}
 .achieve-list .achieve-item {
   font-size: 18px;
   padding: 0 0 0 80px;
@@ -2423,17 +2445,124 @@ a.button {
   position: relative;
 }
 .achieve-list .achieve-item:before {
-  background: url('../img/case-presentation.png') no-repeat center / cover;
+  background: url('../img/bullet.png') no-repeat center / cover;
   content: "";
   display: block;
-  width: 54px;
-  height: 40px;
+  width: 41px;
+  height: 41px;
   position: absolute;
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+.complex-consist {
+  background: #f3f3f3;
+}
+.complex-parts {
+  margin-bottom: 80px;
+}
+.complex-parts .part {
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  margin: 0 auto;
+  height: 340px;
+  width: 90%;
+  position: relative;
+}
+@media (max-width: 991px) {
+  .complex-parts .part {
+    height: 380px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .complex-parts .part {
+    width: 50%;
+  }
+}
+.complex-parts .part-bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  position: absolute;
+  -webkit-filter: grayscale(30%);
+          filter: grayscale(30%);
+  z-index: 0;
+}
+.complex-parts .part-bg.part-driver {
+  background-image: url('../img/part-driver.png');
+}
+.complex-parts .part-bg.part-service {
+  background-image: url('../img/part-service.png');
+}
+.complex-parts .part-bg.part-client {
+  background-image: url('../img/part-client.png');
+}
+.complex-parts .part-bg.part-api {
+  background-image: url('../img/part-api.png');
+}
+.complex-parts .part-descr {
+  color: #fff;
+  font-family: "MullerMedium", sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+  margin: 88% 8% 0;
+  width: 84%;
+  z-index: 1;
+}
+@media (max-width: 991px) {
+  .complex-parts .part-descr {
+    margin: auto 8% 5%;
+  }
+}
+.banner-complex {
+  background-color: #e1e0e5;
+  height: 430px;
+  position: relative;
+}
+.banner-complex .banner-bg {
+  background-image: url('../img/banner-complex.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+}
+@media (max-width: 1200px) {
+  .banner-complex .banner-bg {
+    background-size: 40% auto;
+  }
+}
+.banner-complex .flex > .banner-content {
+  height: auto;
+}
+.banner-complex .banner-content {
+  position: relative;
+  z-index: 1;
+}
+.banner-complex .banner-descr {
+  font-family: "MullerRegular", sans-serif;
+  font-size: 60px;
+  line-height: 1.20;
+}
+.banner-complex .more-info {
+  background: #ffa700;
+  border: 0;
+  margin: 24px 0 0 100px;
+}
+.our-clients {
+  margin-bottom: 70px;
+}
+.our-clients .clients .client-item {
+  margin: 0 auto;
+  width: 150px;
+}
+.our-clients .clients .client-item img {
+  width: 100%;
 }
 .banner-about {
   background: url('../img/banner-about.jpg') no-repeat center / cover;
