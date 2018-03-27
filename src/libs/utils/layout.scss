@@ -35,14 +35,16 @@ $width-lg: 1200px;
         &.#{$prefix}top, &.#{$prefix}bottom   {   &:not(.eflex) >* { width: 100%;    }}
 
         @mixin ssize($suffix){
-            @mixin loop($q) when($q >= 0){
-                > .#{$prefix}grow#{$suffix}-#{$q} {
-                    flex-grow: $q;
+            @mixin loop($q) {
+                @if ($q >= 0) {
+                    > .#{$prefix}grow#{$suffix}-#{$q} {
+                        flex-grow: $q;
+                    }
+                    > .#{$prefix}shrink#{$suffix}-#{$q} {
+                        flex-shrink: $q;
+                    }
+                    @include loop($q - 1);
                 }
-                > .#{$prefix}shrink#{$suffix}-#{$q} {
-                    flex-shrink: $q;
-                }
-                @include loop($q - 1);
             }
             @include loop($quantum);
         }
@@ -60,19 +62,21 @@ $width-lg: 1200px;
     @mixin variant($prefix, $sprefix){
 
         @mixin ssize($suffix){
-            @mixin loop($q) when($q >= 0){
-                &.#{$prefix}left, &.#{$prefix}right {
-                    > .#{$sprefix}size#{$suffix}-#{$q} {
-                        width: (floor(10000000000% * $q / 24) / 100000000);
+            @mixin loop($q) {
+                @if ($q >= 0) {
+                    &.#{$prefix}left, &.#{$prefix}right {
+                        > .#{$sprefix}size#{$suffix}-#{$q} {
+                            width: (floor(10000000000% * $q / 24) / 100000000);
+                        }
                     }
-                }
 
-                &.#{$prefix}top, &.#{$prefix}bottom {
-                    > .#{$sprefix}size#{$suffix}-#{$q} {
-                        height: (floor(10000000000% * $q / 24) / 100000000);
+                    &.#{$prefix}top, &.#{$prefix}bottom {
+                        > .#{$sprefix}size#{$suffix}-#{$q} {
+                            height: (floor(10000000000% * $q / 24) / 100000000);
+                        }
                     }
+                    @include loop($q - 1);
                 }
-                @include loop($q - 1);
             }
             @include loop($quantum);
         }

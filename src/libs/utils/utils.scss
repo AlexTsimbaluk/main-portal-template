@@ -231,9 +231,11 @@ $width-lg: 1200px;
 
 // классы от .font-size-1 до .font-size-30
 // дают размеры шрифта от 0.1em до 3em
-@mixin generate-font-size($levels-font-size-count, $q: 1) when ($q =< $levels-font-size-count){
-    .#{$prop-font-name}-#{$q} {
-        font-size: (0em + ($q / 10));
+@mixin generate-font-size($levels-font-size-count, $q: 1){
+    @if ($q <= $levels-font-size-count) {
+        .#{$prop-font-name}-#{$q} {
+            font-size: (0em + ($q / 10));
+        }
     }
     @include generate-font-size($levels-font-size-count, ($q + 1));
 }
