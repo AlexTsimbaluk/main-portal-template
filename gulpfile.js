@@ -3,6 +3,7 @@ var gulp = require('gulp'),
 	babel = require("gulp-babel"),
 	del = require('del'),
 	less = require('gulp-less'),
+	sass = require('gulp-sass'),
 	lessToScss = require('gulp-less-to-scss'),
 	autoprefixer = require('gulp-autoprefixer'),
 	concat = require('gulp-concat'),
@@ -17,6 +18,12 @@ gulp.task('lessToScss',function(){
     gulp.src('src/less/*.less')
         .pipe(lessToScss())
         .pipe(gulp.dest('src/scss'));
+});
+
+gulp.task('lessToScssUtils',function(){
+    gulp.src('src/libs/utils/*.less')
+        .pipe(lessToScss())
+        .pipe(gulp.dest('src/libs/utils/'));
 });
 
 gulp.task('clean', function() {
@@ -76,10 +83,18 @@ gulp.task('less', function() {
 				['last 15 versions', '> 1%', 'ie 8', 'ie 7'],
 				{ cascade: true })
 			)
-			// TODO - починить минификацию
-			/*.pipe(gulp.dest('src/css/'))
-			.pipe(concat('main.min.css'))
-	        .pipe(cssnano())*/
+			.pipe(gulp.dest('src/css/'))
+			.pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('sass', function() {
+	'use strict';
+	return gulp.src('src/scss/main.scss')
+			.pipe(sass())
+			.pipe(autoprefixer(
+				['last 15 versions', '> 1%', 'ie 8', 'ie 7'],
+				{ cascade: true })
+			)
 			.pipe(gulp.dest('src/css/'))
 			.pipe(browserSync.reload({stream: true}));
 });
@@ -157,9 +172,10 @@ gulp.task('watch', ['browser-sync'], function() {
 			'src/less/*.less',
 			'src/libs/bootstrap-material-design-master/less/*.less'
 		], ['less', 'lessToScss']);
+		// ], ['lessToScss', 'sass']);
 	
 
-	gulp.watch('src/libs/utils/*.less', ['utils']);
+	gulp.watch('src/libs/utils/*.less', ['lessToScssUtils', 'utils']);
 });
 
 gulp.task('default', ['watch']);
